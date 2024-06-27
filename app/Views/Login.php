@@ -140,7 +140,7 @@
                 <input type="text" id="username" placeholder="Masukkan Username" required>
             </div>
             <div class="form-group password-container">
-                <label for="password" class="form-label">Password</label>
+                <gitlabel for="password" class="form-label">Password</gitlabel>
                 <input type="password" id="password" placeholder="Masukkan Password" required>
             </div>
 
