@@ -132,7 +132,7 @@
                 <span style="font-size: 18px;">Universitas Lambung Mangkurat</span>
             </div>
         </div>
-        <h2 class="title">zainudin</h2>
+        <h2 class="title">manusia</h2>
         <p class="subtitle"> dan password untuk login!</p>
         <form action="#">
             <div class="form-group">
