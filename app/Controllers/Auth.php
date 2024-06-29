@@ -80,22 +80,14 @@ class Auth extends BaseController
     }
 
    public function suratRekomendasiMahasiswa()
-<<<<<<< HEAD
 {
     if (!$this->session->get('isLoggedIn')) {
         return redirect()->to('/auth/login');
     }
-=======
-    {
-        if (!$this->session->get('isLoggedIn')) {
-            return redirect()->to('/auth/login');
-        }
->>>>>>> dfb4e01e65af662ea17450722e5bb95d83d5e4b6
 
     $pengajuanModel = new \App\Models\PengajuanModel();
     $data['pengajuan'] = $pengajuanModel->findAll();
 
-<<<<<<< HEAD
     return view('surat_rekomendasi_mahasiswa', $data);
 }
 
@@ -129,39 +121,4 @@ public function storePengajuan()
 
     return redirect()->to('/surat_rekomendasi_mahasiswa');
 }
-=======
-        return view('surat_rekomendasi_mahasiswa', $data);
-    }
-
-    public function tambahPengajuan()
-    {
-        if (!$this->session->get('isLoggedIn')) {
-            return redirect()->to('/auth/login');
-        }
-
-    return view('tambah_pengajuan');
-    }
-
-    public function storePengajuan()
-    {
-        $pengajuanModel = new \App\Models\PengajuanModel();
-
-        $data = [
-            'nama' => $this->request->getPost('nama'),
-            'nim' => $this->request->getPost('nim'),
-            'prodi' => $this->request->getPost('prodi'),
-            'phone' => $this->request->getPost('phone'),
-            'semester' => $this->request->getPost('semester'),
-            'tahun_akademik' => $this->request->getPost('tahun_akademik'),
-            'keperluan' => $this->request->getPost('keperluan'),
-            'alasan' => $this->request->getPost('alasan'),
-            'tanggal_pengajuan' => date('Y-m-d'),
-            'status' => 'Diproses'
-        ];
-
-        $pengajuanModel->save($data);
-
-        return redirect()->to('/surat_rekomendasi_mahasiswa');
-    }
->>>>>>> dfb4e01e65af662ea17450722e5bb95d83d5e4b6
 }
